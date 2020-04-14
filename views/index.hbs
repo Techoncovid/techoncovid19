@@ -22,6 +22,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
     <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" />
     <title>RealTime-CoronaVirus-Data</title>
 
     <!--Start of Tawk.to Script-->
@@ -100,6 +101,10 @@
             </div>
         </div>
     </div>
+
+    <!--MAP-->
+    <div id="container"></div>
+    <!--map ends--><br>
     <div class="card text-center">
         <div class="card-header" style="background-color: rgba(43, 104, 184, 0.466);">
             World_stats
@@ -202,11 +207,15 @@
 
 
     <br><br>
-    <div class="footer">
-
-        <p>developer contact: <a href="https://arbazahmed.ml/">ArbazAhmed.ml</a></p>
-    </div>
-
+    <center>
+        <h3>Contribute : </h3>
+        <a href="https://github.com/techoncovid"><button type="button" class="btn btn-success btn-lg"><i
+                    class="fa fa-github"></i>&nbsp;github</button></a>
+        <a href="https://twitter.com/TechagaintsNcov"> <button type="button" class="btn btn-success btn-lg "><i
+                    class="fa fa-twitter"></i>&nbsp;twitter</button></a>
+        <a href="mailto:techagaintscovid19@gmail.com?Subject=Hello%20techoncovid" target="_top"><button type="email"
+                class="btn btn-success btn-lg"><i class="fa fa-envelope-open"></i>&nbsp;email</button></a>
+    </center><br><br>
 
 
 
@@ -219,7 +228,10 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-
+    <script src="https://code.highcharts.com/maps/highmaps.js"></script>
+    <script src="https://code.highcharts.com/maps/modules/exporting.js"></script>
+    <script src="https://code.highcharts.com/mapdata/countries/in/in-all.js"></script>
+    <script src="js/map.js"></script>
 </body>
 
 </html>
