@@ -31,11 +31,11 @@ app.get("/", (req, res) => {
     json: true,
     headers: {
       "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
-      "x-rapidapi-key": "8ca55d83ccmsha37b92cc7723a3cp17ec51jsnb62a8633e050"
-    }
+      "x-rapidapi-key": "8ca55d83ccmsha37b92cc7723a3cp17ec51jsnb62a8633e050",
+    },
   };
 
-  request(options1, function(error, response, body) {
+  request(options1, function (error, response, body) {
     if (error) throw new Error(error);
 
     console.log("total cases: around the World is: " + body.total_cases);
@@ -51,11 +51,11 @@ app.get("/", (req, res) => {
       json: true,
       headers: {
         "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
-        "x-rapidapi-key": "8ca55d83ccmsha37b92cc7723a3cp17ec51jsnb62a8633e050"
-      }
+        "x-rapidapi-key": "8ca55d83ccmsha37b92cc7723a3cp17ec51jsnb62a8633e050",
+      },
     };
 
-    request(options2, function(error, response, body1) {
+    request(options2, function (error, response, body1) {
       if (error) throw new Error(error);
       let d = JSON.stringify(body1);
       let sta = body1.statistic_taken_at;
@@ -71,7 +71,7 @@ app.get("/", (req, res) => {
         tnd: body.new_deaths,
 
         hello: d,
-        sta
+        sta,
       });
     });
   });
@@ -94,17 +94,17 @@ app.post("/search", (req, res) => {
     qs: { country: cname },
     headers: {
       "x-rapidapi-host": "coronavirus-monitor.p.rapidapi.com",
-      "x-rapidapi-key": "8ca55d83ccmsha37b92cc7723a3cp17ec51jsnb62a8633e050"
-    }
+      "x-rapidapi-key": "8ca55d83ccmsha37b92cc7723a3cp17ec51jsnb62a8633e050",
+    },
   };
 
-  request(options, function(error, response, body) {
+  request(options, function (error, response, body) {
     if (error) throw new Error(error);
     // console.log(body);
     // var b = JSON.parse()
     if (Object.keys(body.latest_stat_by_country).length === 0) {
       return res.render("search", {
-        err: "Check Spelling or result not Found"
+        err: "Check Spelling or result not Found",
       });
     } else {
       res.render("search", {
@@ -117,7 +117,7 @@ app.post("/search", (req, res) => {
         trc: body.latest_stat_by_country[0].total_recovered,
         sc: body.latest_stat_by_country[0].serious_critical,
         tcpm: body.latest_stat_by_country[0].total_cases_per1m,
-        rd: body.latest_stat_by_country[0].record_date
+        rd: body.latest_stat_by_country[0].record_date,
       });
     }
   });
